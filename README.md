@@ -3,6 +3,14 @@ This project is to generate AnnotationProcessor.jar
 
 To use the processor, there are several options.
 
+# Build
+
+`mvn compile package`
+
+`javac -Xlint:all -d . src/main/java/com/myren/processor/DeprecatedAnnotationProcessor.java`
+
+`jar cf annotation-processor.jar com/myren/processor/DeprecatedAnnotationProcessor.class`
+
 # Usage
 
 ## Javac
