@@ -28,6 +28,8 @@
     </properties>
 
     <build>
+        <finalName>annotation-processor</finalName>
+
         <plugins>
             <!-- Compiler plugin to include META-INF services for processors -->
             <plugin>
