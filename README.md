@@ -15,9 +15,13 @@ To use the processor, there are several options.
 
 ## Javac
 
-`javac -processor com.myren.processor.DeprecatedAnnotationProcessor -processorpath "[class path]" [source files]`
+`javac -processor com.myren.processor.DeprecatedAnnotationProcessor -processorpath "[path to processor]" [source files]`
 
-`javac -processor com.myren.processor.DeprecatedAnnotationProcessor -cp "[class path]" [source files]`
+`javac -cp "[class path including processor]" [source files]`
+
+Note: Because the processor is properly registered with META-INF/services/javax.annotation.processing.Processor, then Javac will automatically discover it, even without -processor or -processorpath.
+
+e.g.: `javac -cp "c:\.m2\repository-M3\com\myren\annotation-processor\1.0.0\annotation-processor-1.0.0.jar;C:\.m2\repository-M3\io\swagger\core\v3\swagger-annotations-jakarta\2.2.9\swagger-annotations-jakarta-2.2.9.jar" ds-app/src/main/java/TryDeprecation.java`
 
 ## Maven Compiler Plugin Configuration
 ```xml

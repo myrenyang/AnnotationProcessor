@@ -18,6 +18,9 @@ import java.util.Set;
  */
 @SupportedAnnotationTypes("*")
 public class DeprecatedAnnotationProcessor extends AbstractProcessor {
+    public DeprecatedAnnotationProcessor() {
+        System.out.println("Processing annotation with " + this.getClass().getName());
+    }
 
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
